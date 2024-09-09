@@ -123,6 +123,11 @@ const CoinContainer: React.FC = () => {
           mb: 2,
           fontFamily: "'Press Start 2P', cursive",
           color: "#ff6fae",
+          fontSize: {
+            xs: "1.5rem",
+            sm: "2rem",
+            md: "3rem",
+          },
         }}
       >
         Coins Fall
@@ -131,8 +136,16 @@ const CoinContainer: React.FC = () => {
       <Box
         sx={{
           position: "relative",
-          width: `${maxColumns * coinWidth}px`,
-          height: `${maxRows * coinHeight}px`,
+          width: {
+            xs: `${maxColumns * coinWidth * 0.5}px`,
+            sm: `${maxColumns * coinWidth * 0.75}px`,
+            md: `${maxColumns * coinWidth}px`,
+          },
+          height: {
+            xs: `${maxRows * coinHeight * 0.5}px`,
+            sm: `${maxRows * coinHeight * 0.75}px`,
+            md: `${maxRows * coinHeight}px`,
+          },
           backgroundColor: "#4d57f0",
           border: "7px solid #fff200",
           borderRadius: "15px",
